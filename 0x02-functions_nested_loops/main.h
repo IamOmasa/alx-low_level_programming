@@ -1,6 +1,8 @@
-#ifndef MAIN_H /*Header guards to prevent multiple inclusions*/
+#ifndef MAIN_H
 #define MAIN_H
 
-void _putchar();
+/*Header guards to prevent multiple inclusions*/
+
+void _putchar(const char *str);
 
 #endif

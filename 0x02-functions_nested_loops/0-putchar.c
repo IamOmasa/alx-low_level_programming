@@ -4,18 +4,24 @@
 /**
  *main - Entry point
  *
- *Description: print _putchar
+ *Description: print _putchar followed by new line
  *
  * Return: Always 0 (succcess)
  */
-void _putchar()
+void _putchar(const char *str)
 {
-	printf("_putchar\n");
+/**
+ *_putchar - function that print an input value
+ *
+ */
+	printf("%s\n", str);
 }
 
 int main(void)
 {
-	_putchar();
+	const char *txt = "_putchar";
+
+	_putchar(txt);
 
 	return (0);
 }
