@@ -1,7 +1,7 @@
 #include"main.h"
 
 /**
- * print_alphabet - function with null input
+ * print_alphabet_x10 - function with null input
  *
  * Description: a function that prints the alphabet, in lowercase
  * , followed by a new line.
