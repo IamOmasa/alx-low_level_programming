@@ -3,14 +3,14 @@
 /**
  *_abs(int)- function to print absolute value
  *
- *@n: input integer
+ *@int: input integer
  *
  * Return: absolute value
  */
 
-int _abs(int n)
+int _abs(int)
 {
-	if (n < 0)
+	if (int < 0)
 		n = (-1) * n;
 	return (n);
 }
