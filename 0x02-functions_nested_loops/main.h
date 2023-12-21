@@ -3,6 +3,7 @@
 
 /*Header guards to prevent multiple inclusions*/
 
-void _putchar(const char *str);
+int _putchar(char c);
+void print_alphabet(void);
 
 #endif

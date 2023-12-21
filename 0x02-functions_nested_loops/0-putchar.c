@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -8,20 +7,16 @@
  *
  * Return: Always 0 (succcess)
  */
-void _putchar(const char *str)
-{
-/**
- *_putchar - function that print an input value
- *
- */
-	printf("%s\n", str);
-}
 
 int main(void)
 {
-	const char *txt = "_putchar";
+	char str[] = "_putchar"; /*_putchar array*/
+	int ch; /*array length*/
 
-	_putchar(txt);
+	for (ch = 0; str[ch] != '\0'; ch++)
+		_putchar(str[ch]);
+
+	_putchar('\n');
 
 	return (0);
 }
