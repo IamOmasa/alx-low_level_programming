@@ -17,6 +17,6 @@ void print_to_98(int n)
 			printf("%d, ", incr);
 	else
 		for (incr = n; incr < 98; ++incr)
-			printf("%d, ", count);
+			printf("%d, ", incr);
 	printf("98\n");
 }
