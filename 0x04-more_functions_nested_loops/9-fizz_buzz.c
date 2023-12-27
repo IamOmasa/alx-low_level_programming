@@ -9,18 +9,18 @@
 
 void main(void)
 {
-	int num, i;
+	int i;
 
-	for (i = 1; 1 <= 100; ++i)
+	for (i = 1; i <= 100; ++i)
 	{
-		if (num % 3 == 0 && !(num % 5 == 0))
+		if (i % 3 == 0 && !(i % 5 == 0))
 			printf("Fizz");
-		else if (num % 5 && !(num % 3 == 0))
+		else if (i % 5 && !(i % 3 == 0))
 			printf("Buzz");
-		else if (num % 5 == 0 && num % 3 == 0)
+		else if (i % 5 == 0 && i % 3 == 0)
 			printf("FizzBuzz");
 		else
-			printf("%d", num);
+			printf("%d", i);
 	}
 	printf('\n');
 
