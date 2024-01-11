@@ -5,7 +5,7 @@
  *@x: input
  *@y: power
  *
- *Return: value of x power y
+ *Return: value of @x power @y
  */
 int _pow_recursion(int x, int y)
 {
