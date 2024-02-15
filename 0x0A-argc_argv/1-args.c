@@ -11,7 +11,13 @@
 
 int main(int argc, __attribute__((unused)), char *argv[])
 {
-	ptintf("%s\n", argc);
+	int i = 0, m;
+	while(i < argc)
+	{
+		m = i;
+		i++;
+	}
+	printf("%d\n", m);
 
 	return (0);
 
