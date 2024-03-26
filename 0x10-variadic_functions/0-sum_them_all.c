@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdarg.h>
 #include "variadic_functions.h"
 
@@ -24,11 +25,12 @@ int sum_them_all(const unsigned int n, ...)
 	/* Iterate through args */
 	for (i = 0; i < n; i++)
 	{
-		int num = va_arg(added_num, int)
+		int num = va_arg(added_num, int);
+
 		sum += num
 	}
 
 	va_end();
 
-	return sum;
+	return (sum);
 }
