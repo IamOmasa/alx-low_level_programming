@@ -24,10 +24,11 @@ int sum_them_all(const unsigned int n, ...)
 	/* Iterate through args */
 	for (i = 0; i < n; i++)
 	{
-		sum += va_arg(added_num, int);
+		int num = va_arg(added_num, int)
+		sum += num
 	}
 
-	return (sum)
+	va_end();
 
-	va_end(added_sum);
+	return sum;
 }
