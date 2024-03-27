@@ -12,25 +12,21 @@
 
 int sum_them_all(const unsigned int n, ...)
 {
+	if (n == 0)
+		return (0);
 	/* name your list */
 	va_list added_num;
 	unsigned int i, sum = 0;
 
 	/* initialize arg */
 	va_start(added_num, n);
-
-	if (n == 0)
-		return (0);
-
 	/* Iterate through args */
 	for (i = 0; i < n; i++)
 	{
-		int num = va_arg(added_num, int);
-
-		sum += num
+		sum += va_arg(added_num, int);
 	}
 
-	va_end();
+	va_end(added_num);
 
 	return (sum);
 }
