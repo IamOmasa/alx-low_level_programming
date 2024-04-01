@@ -9,6 +9,9 @@
 
 size_t print_list(const list_t *h)
 {
+	list_t *str;
+
+	str = (list_t)malloc(sizeof(list_t));
 
 	size_t count = 0;
 
