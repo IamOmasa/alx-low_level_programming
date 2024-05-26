@@ -3,7 +3,7 @@
 
 /**
  *free_dog - function that free dog
- *@d: free struct pointer to dog 
+ *@d: free struct pointer to dog
  *
  * Return: Nothing
  */
