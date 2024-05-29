@@ -1,5 +1,12 @@
 #include "3-calc.h"
 
+/**
+ *main - main function
+ *@argc: number of argument
+ *@argv: array of arguments
+ *Return: Always (0) Success
+ */
+
 int main(int argc, char *argv[])
 {
 	int arg1, arg2;
@@ -24,7 +31,7 @@ int main(int argc, char *argv[])
 		return (99);
 	}
 
-	if ((strcmp(operator, "/") == 0 || strcmp(operator, "%") == 0) && 
+	if ((strcmp(operator, "/") == 0 || strcmp(operator, "%") == 0) &&
 			arg2 == 0)
 	{
 		printf("Error\n");
