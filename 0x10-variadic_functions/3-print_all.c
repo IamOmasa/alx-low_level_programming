@@ -1,5 +1,4 @@
-#include <stdarg.h>
-#include <stdio.h>
+#include "variadic_functions.h"
 
 /**
  *print_all - a function that prints anything.
@@ -9,50 +8,38 @@
  *Return: nothing
  */
 
-void print_all(const char * const format, ...)
+void print_all(const char *format, ...)
 {
-	va_list args;
+	int i = 0, j, found;
+	va_list ap;
+	op_t handlers[] = {
+		{'c', handle_character},
+		{'i', handle_intger},
+		{'f', handle_float},
+		{'s', handle_string},
+	};
 
-	va_start(args, format);
+	va_start(ap, format);
 
-	int i = 0;
-
-	int printed = 0;
-
-	while (format[i] && i < 40)
+	while (format[i] != '\0')
 	{
-		if (format[i] == 'c')
+		/* format = 'ceis' */
+		j = 0;
+		found = 0;
+		while (j < 4)
 		{
-			printf("%c", va_arg(args, int));
-			printed = 1;
-		} else if (format[i] == 'i')
-		{
-			printf("%d", va_arg(args, int));
-			printed = 1;
-		} else if (format[i] == 'f')
-		{
-			printf("%f", (float) va_arg(args, double));
-			printed = 1;
-		} else if (format[i] == 's')
-		{
-			char *str_arg = va_arg(args, char *);
-
-			if (str_arg == NULL)
+			if (handlers[j].format == format[i])
 			{
-				printf("(nil)");
-			} else
-			{
-				printf("%s", str_arg);
+				handlers[j].fun(ap);
+				found = 1;
+				break;
 			}
-			printed = 1;
+			++j;
 		}
-
-		if (format[i + 1] && printed)
-		{
+		if (format[i + 1] == '\0')
+			printf("\n");
+		else if (found == 1)
 			printf(", ");
-		}
-		i++;
+		++i;
 	}
-	printf("\n");
-	va_end(args);
 }
