@@ -20,7 +20,7 @@ list_t *add_node(list_t **head, const char *str)
 	if (str == NULL)
 		str_len = 0;
 
-	while (str != NULL)
+	while (str[str_len] != '\0')
 		++str_len;
 
 	new_node = malloc(sizeof(list_t));
