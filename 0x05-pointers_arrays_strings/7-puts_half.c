@@ -19,7 +19,7 @@ void puts_half(char *str)
 	/*check if its odd or even*/
 	if (string_length % 2 != 0)
 	{
-		n = (string_length - 1) / 2;
+		n = (string_length - 1) / 2 + 1;
 	}
 	else
 		n = string_length / 2;
